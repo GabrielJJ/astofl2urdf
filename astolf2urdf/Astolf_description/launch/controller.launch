@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find Astolf_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="Astolf" args="frwheel_frontm_joint_position_controller flwheel_frontm_joint_position_controller brwheel_backm_joint_position_controller blwheel_backm_joint_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/Astolf/joint_states"/>
+</node>
+
+</launch>

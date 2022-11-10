@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<robot name="Astolf" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="frwheel_frontm_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="frwheel_frontm_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="frwheel_frontm_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="flwheel_frontm_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="flwheel_frontm_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="flwheel_frontm_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="brwheel_backm_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="brwheel_backm_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="brwheel_backm_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="blwheel_backm_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="blwheel_backm_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="blwheel_backm_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

@@ -1,0 +1,23 @@
+Astolf_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  frwheel_frontm_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: frwheel_frontm_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  flwheel_frontm_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: flwheel_frontm_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  brwheel_backm_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: brwheel_backm_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  blwheel_backm_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: blwheel_backm_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
